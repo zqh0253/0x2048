@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\work\cs\JSJZC\0x2048\src\Top.ncd
+OUTFILE=D:\work\cs\JSJZC\0x2048\src\Top.bit
+FAMILY=Kintex7
+PART=xc7k160t-1ffg676
+WORKINGDIR=D:\work\cs\JSJZC\0x2048\src
+LICENSE=WebPack
+USER_INFO=__0_0_0

@@ -1,0 +1,80 @@
+Release 14.7 ngdbuild P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: D:\ise\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -intstyle
+ise -dd _ngo -sd code -sd ipcore_dir -nt timestamp -uc code/Org-Sword.ucf -p
+xc7k160t-ffg676-1 Top.ngc Top.ngd
+
+Reading NGO file "D:/work/cs/JSJZC/0x2048/src/Top.ngc" ...
+Loading design module "code/SAnti_jitter.ngc"...
+Loading design module "code/SEnter_2_32.ngc"...
+Loading design module "code/SSeg7_Dev.ngc"...
+Loading design module "ipcore_dir/RAM_B.ngc"...
+Loading design module "code/Counter_x.ngc"...
+Loading design module "code/Multi_8CH32.ngc"...
+Loading design module "code/SPIO.ngc"...
+Loading design module "code/M_datapath.ngc"...
+Loading design module "code/ctrl.ngc"...
+Loading design module "ipcore_dir/item2.ngc"...
+Loading design module "ipcore_dir/reditem.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "code/Org-Sword.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+WARNING:NgdBuild:452 - logical net 'U1/overflow' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<31>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<30>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<29>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<28>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<27>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<26>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<25>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<24>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<23>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<22>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<21>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<20>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<19>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<18>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<17>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<16>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<15>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<14>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<13>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<12>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<11>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<10>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<9>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<8>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<7>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<6>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<5>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<4>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<3>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<2>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<1>' has no driver
+WARNING:NgdBuild:452 - logical net 'U3/dinb<0>' has no driver
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  33
+
+Total memory usage is 4585700 kilobytes
+
+Writing NGD file "Top.ngd" ...
+Total REAL time to NGDBUILD completion:  31 sec
+Total CPU time to NGDBUILD completion:   31 sec
+
+Writing NGDBUILD log file "Top.bld"...
