@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Reading design: Top.prj
 
@@ -307,17 +307,17 @@ WARNING:Xst:653 - Signal <addrb> is used but never assigned. This sourceless sig
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Found 11-bit subtractor for signal <GND_17_o_GND_17_o_sub_42_OUT> created at line 106.
-    Found 32-bit subtractor for signal <n0118> created at line 106.
     Found 10-bit adder for signal <cnt_x[9]_GND_17_o_add_2_OUT> created at line 65.
     Found 10-bit adder for signal <cnt_y[9]_GND_17_o_add_9_OUT> created at line 72.
     Found 32-bit adder for signal <score[31]_GND_17_o_add_18_OUT> created at line 94.
     Found 9-bit adder for signal <pos[8]_GND_17_o_add_20_OUT> created at line 96.
-    Found 17-bit adder for signal <n0117> created at line 105.
+    Found 17-bit adder for signal <n0088> created at line 105.
     Found 32-bit adder for signal <GND_17_o_GND_17_o_add_43_OUT> created at line 106.
     Found 10-bit subtractor for signal <x_ptr> created at line 31.
     Found 10-bit subtractor for signal <y_ptr> created at line 32.
-    Found 10x7-bit multiplier for signal <n0138> created at line 105.
-    Found 32x7-bit multiplier for signal <n0112> created at line 106.
+    Found 13-bit subtractor for signal <addr_item4<12:0>> created at line 106.
+    Found 10x7-bit multiplier for signal <n0136> created at line 105.
+    Found 32x7-bit multiplier for signal <n0114> created at line 106.
     Found 10-bit comparator lessequal for signal <n0042> created at line 111
     Found 10-bit comparator lessequal for signal <n0044> created at line 111
     Found 10-bit comparator lessequal for signal <n0047> created at line 112
@@ -348,9 +348,9 @@ Macro Statistics
  10-bit adder                                          : 2
  10-bit subtractor                                     : 2
  11-bit subtractor                                     : 1
+ 13-bit subtractor                                     : 1
  17-bit adder                                          : 1
  32-bit adder                                          : 3
- 32-bit subtractor                                     : 1
  4-bit adder                                           : 1
  9-bit adder                                           : 1
 # Registers                                            : 16
@@ -410,7 +410,7 @@ The following registers are absorbed into counter <cnt_x>: 1 register on signal 
 The following registers are absorbed into counter <score>: 1 register on signal <score>.
 The following registers are absorbed into counter <cnt_y>: 1 register on signal <cnt_y>.
 The following registers are absorbed into counter <pos>: 1 register on signal <pos>.
-	Multiplier <Mmult_n0138> in block <VGA_ctrl> and adder/subtractor <Madd_n0117_Madd> in block <VGA_ctrl> are combined into a MAC<Maddsub_n0138>.
+	Multiplier <Mmult_n0136> in block <VGA_ctrl> and adder/subtractor <Madd_n0088_Madd> in block <VGA_ctrl> are combined into a MAC<Maddsub_n0136>.
 Unit <VGA_ctrl> synthesized (advanced).
 
 Synthesizing (advanced) Unit <clk_div>.
@@ -422,14 +422,14 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # MACs                                                 : 1
- 10x7-to-1-bit MAC                                     : 1
+ 10x7-to-13-bit MAC                                    : 1
 # Multipliers                                          : 1
  32x7-bit multiplier                                   : 1
 # Adders/Subtractors                                   : 5
- 1-bit adder                                           : 1
- 1-bit subtractor                                      : 1
  10-bit subtractor                                     : 2
  11-bit subtractor                                     : 1
+ 13-bit adder                                          : 1
+ 13-bit subtractor                                     : 1
 # Counters                                             : 6
  10-bit up counter                                     : 2
  32-bit up counter                                     : 2
@@ -463,6 +463,7 @@ Optimizing FSM <U11/FSM_0> on signal <run[1:2]> with gray encoding.
  00    | 01
  01    | 11
 -------------------
+WARNING:Xst:2677 - Node <Mmult_n01141> of sequential type is unconnected in block <VGA_ctrl>.
 
 Optimizing unit <Top> ...
 
@@ -562,47 +563,49 @@ Top Level Output File Name         : Top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 5682
+# BELS                             : 5828
 #      AND2                        : 11
 #      AND3                        : 88
 #      AND4                        : 72
 #      GND                         : 7
-#      INV                         : 93
-#      LUT1                        : 116
-#      LUT2                        : 63
-#      LUT3                        : 1356
-#      LUT4                        : 269
-#      LUT5                        : 530
-#      LUT6                        : 2448
-#      MUXCY                       : 203
+#      INV                         : 94
+#      LUT1                        : 118
+#      LUT2                        : 82
+#      LUT3                        : 1351
+#      LUT4                        : 296
+#      LUT5                        : 535
+#      LUT6                        : 2478
+#      MUXCY                       : 235
 #      MUXF7                       : 117
 #      OR2                         : 57
 #      OR3                         : 24
 #      OR4                         : 32
 #      VCC                         : 8
 #      XOR2                        : 1
-#      XORCY                       : 187
-# FlipFlops/Latches                : 1716
+#      XORCY                       : 222
+# FlipFlops/Latches                : 1715
 #      FD                          : 254
 #      FDC                         : 112
 #      FDCE                        : 1086
 #      FDCE_1                      : 15
-#      FDE                         : 174
+#      FDE                         : 173
 #      FDE_1                       : 14
 #      FDP                         : 6
 #      FDPE                        : 1
 #      FDPE_1                      : 3
 #      FDR                         : 12
 #      FDRE                        : 39
-# RAMS                             : 287
-#      RAMB18E1                    : 5
-#      RAMB36E1                    : 282
+# RAMS                             : 285
+#      RAMB18E1                    : 4
+#      RAMB36E1                    : 281
 # Clock Buffers                    : 6
 #      BUFG                        : 5
 #      BUFGP                       : 1
 # IO Buffers                       : 54
 #      IBUF                        : 23
 #      OBUF                        : 31
+# DSPs                             : 1
+#      DSP48E1                     : 1
 
 Device utilization summary:
 ---------------------------
@@ -611,25 +614,26 @@ Selected Device : 7k160tffg676-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1716  out of  202800     0%  
- Number of Slice LUTs:                 4875  out of  101400     4%  
-    Number used as Logic:              4875  out of  101400     4%  
+ Number of Slice Registers:            1715  out of  202800     0%  
+ Number of Slice LUTs:                 4954  out of  101400     4%  
+    Number used as Logic:              4954  out of  101400     4%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   6126
-   Number with an unused Flip Flop:    4410  out of   6126    71%  
-   Number with an unused LUT:          1251  out of   6126    20%  
-   Number of fully used LUT-FF pairs:   465  out of   6126     7%  
-   Number of unique control sets:        45
+ Number of LUT Flip Flop pairs used:   6212
+   Number with an unused Flip Flop:    4497  out of   6212    72%  
+   Number with an unused LUT:          1258  out of   6212    20%  
+   Number of fully used LUT-FF pairs:   457  out of   6212     7%  
+   Number of unique control sets:        44
 
 IO Utilization: 
  Number of IOs:                          55
  Number of bonded IOBs:                  55  out of    400    13%  
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:              285  out of    325    87%  
-    Number using Block RAM only:        285
+ Number of Block RAM/FIFO:              283  out of    325    87%  
+    Number using Block RAM only:        283
  Number of BUFG/BUFGCTRLs:                6  out of     32    18%  
+ Number of DSP48E1s:                      1  out of    600     0%  
 
 ---------------------------
 Partition Resource Summary:
@@ -653,7 +657,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)       | Load  |
 -----------------------------------+-----------------------------+-------+
 clk_100mhz                         | BUFGP                       | 583   |
-U8/clkdiv_1                        | BUFG                        | 34    |
+U8/clkdiv_1                        | BUFG                        | 31    |
 U9/clk1                            | BUFG                        | 41    |
 M4/push(M4/push1:O)                | NONE(*)(M4/state_0)         | 3     |
 IO_clk(IO_clk1:O)                  | BUFG(*)(U10/counter0_Lock_0)| 141   |
@@ -670,9 +674,9 @@ Asynchronous Control Signals Information:
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 Control Signal                                                                                                                                                                                                                                                                | Buffer(FF name)                                                                                                                                    | Load  |
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux_12102(U3/XST_GND:G)                                                                                                                                                            | NONE(U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[106].ram.r/v6_init.ram/NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram)    | 504   |
-U11/_i000046/N1(U11/_i000046/XST_GND:G)                                                                                                                                                                                                                                       | NONE(U11/_i000046/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram) | 10    |
-U11/_i000047/N1(U11/_i000047/XST_GND:G)                                                                                                                                                                                                                                       | NONE(U11/_i000047/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram) | 10    |
+U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux_12102(U3/XST_GND:G)                                                                                                                                                            | NONE(U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[198].ram.r/v6_init.ram/NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram)    | 504   |
+U11/_i000046/N1(U11/_i000046/XST_GND:G)                                                                                                                                                                                                                                       | NONE(U11/_i000046/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram) | 10    |
+U11/_i000047/N1(U11/_i000047/XST_GND:G)                                                                                                                                                                                                                                       | NONE(U11/_i000047/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram) | 8     |
 U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/cascadelata_tmp(U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B:CASCADEOUTA)    | NONE(U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_T)  | 1     |
 U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/cascadelatb_tmp(U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B:CASCADEOUTB)    | NONE(U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_T)  | 1     |
 U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/cascadelata_tmp(U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_B:CASCADEOUTA)    | NONE(U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.TRUE_DP.CASCADED_PRIM36.ram_T)  | 1     |
@@ -721,7 +725,7 @@ Speed Grade: -1
 
    Minimum period: 10.003ns (Maximum Frequency: 99.970MHz)
    Minimum input arrival time before clock: 2.542ns
-   Maximum output required time after clock: 4.291ns
+   Maximum output required time after clock: 5.288ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -769,27 +773,35 @@ Delay:               10.003ns (Levels of Logic = 16)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'U8/clkdiv_1'
-  Clock period: 3.271ns (frequency: 305.717MHz)
-  Total number of paths / destination ports: 512 / 52
+  Clock period: 6.602ns (frequency: 151.477MHz)
+  Total number of paths / destination ports: 13026 / 64
 -------------------------------------------------------------------------
-Delay:               3.271ns (Levels of Logic = 3)
-  Source:            U11/cnt_x_0 (FF)
-  Destination:       U11/cnt_y_0 (FF)
+Delay:               6.602ns (Levels of Logic = 11)
+  Source:            U11/cnt_y_2 (FF)
+  Destination:       U11/_i000046/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM18.ram (RAM)
   Source Clock:      U8/clkdiv_1 rising
   Destination Clock: U8/clkdiv_1 rising
 
-  Data Path: U11/cnt_x_0 to U11/cnt_y_0
+  Data Path: U11/cnt_y_2 to U11/_i000046/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM18.ram
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             16   0.282   0.823  U11/cnt_x_0 (U11/cnt_x_0)
-     LUT5:I0->O            1   0.053   0.413  U11/Mcount_cnt_y_val1_SW0 (N7)
-     LUT6:I5->O           12   0.053   0.811  U11/Mcount_cnt_y_val1 (U11/Mcount_cnt_y_val1)
-     LUT6:I0->O           10   0.053   0.458  U11/Mcount_cnt_y_val (U11/Mcount_cnt_y_val)
-     FDRE:R                    0.325          U11/cnt_y_0
+     FDRE:C->Q            28   0.282   0.877  U11/cnt_y_2 (U11/cnt_y_2)
+     LUT5:I0->O           15   0.053   0.694  U11/Msub_y_ptr_xor<4>111 (U11/Msub_y_ptr_xor<4>11)
+     LUT4:I1->O            8   0.053   0.648  U11/Msub_y_ptr_xor<6>11 (U11/Maddsub_n0136_Madd2_lut<11>)
+     LUT6:I3->O            5   0.053   0.512  U11/Maddsub_n0136_Madd2_xor<9>111 (U11/Maddsub_n0136_Madd2_xor<9>11)
+     LUT4:I2->O            1   0.053   0.725  U11/Maddsub_n0136_Madd2_xor<9>12 (U11/Maddsub_n0136_Madd_102)
+     LUT6:I1->O            1   0.053   0.000  U11/Maddsub_n0136_Madd3_lut<10> (U11/Maddsub_n0136_Madd3_lut<10>)
+     MUXCY:S->O            1   0.291   0.000  U11/Maddsub_n0136_Madd3_cy<10> (U11/Maddsub_n0136_Madd3_cy<10>)
+     XORCY:CI->O           1   0.320   0.413  U11/Maddsub_n0136_Madd3_xor<11> (U11/Maddsub_n0136_11)
+     LUT1:I0->O            1   0.053   0.000  U11/Maddsub_n0136_Madd_cy<11>_rt (U11/Maddsub_n0136_Madd_cy<11>_rt)
+     MUXCY:S->O            0   0.291   0.000  U11/Maddsub_n0136_Madd_cy<11> (U11/Maddsub_n0136_Madd_cy<11>)
+     XORCY:CI->O           6   0.320   0.432  U11/Maddsub_n0136_Madd_xor<12> (U11/n0088<12>)
+     begin scope: 'U11/_i000046:addra<12>'
+     RAMB18E1:ADDRARDADDR13        0.479          U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM18.ram
     ----------------------------------------
-    Total                      3.271ns (0.766ns logic, 2.505ns route)
-                                       (23.4% logic, 76.6% route)
+    Total                      6.602ns (2.301ns logic, 4.301ns route)
+                                       (34.9% logic, 65.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'U9/clk1'
@@ -1057,27 +1069,28 @@ Offset:              0.779ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'U8/clkdiv_1'
-  Total number of paths / destination ports: 1110 / 14
+  Total number of paths / destination ports: 2794 / 14
 -------------------------------------------------------------------------
-Offset:              4.291ns (Levels of Logic = 6)
-  Source:            U11/cnt_y_4 (FF)
+Offset:              5.288ns (Levels of Logic = 7)
+  Source:            U11/cnt_y_2 (FF)
   Destination:       Red<3> (PAD)
   Source Clock:      U8/clkdiv_1 rising
 
-  Data Path: U11/cnt_y_4 to Red<3>
+  Data Path: U11/cnt_y_2 to Red<3>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             5   0.282   0.629  U11/cnt_y_4 (U11/cnt_y_4)
-     LUT3:I0->O            3   0.053   0.649  U11/GND_17_o_y_ptr[9]_LessThan_53_o121 (U11/GND_17_o_y_ptr[9]_LessThan_53_o12)
-     LUT6:I2->O            1   0.053   0.635  U11/Mmux_blue126 (U11/Mmux_blue126)
-     LUT5:I1->O            1   0.053   0.635  U11/Mmux_blue128 (U11/Mmux_blue128)
-     LUT5:I1->O           12   0.053   0.797  U11/Mmux_blue129 (U11/Mmux_blue12)
-     LUT5:I0->O            1   0.053   0.399  U11/Mmux_red41 (Red_3_OBUF)
-     OBUF:I->O                 0.000          Red_3_OBUF (Red<3>)
+     FDRE:C->Q            28   0.282   0.877  U11/cnt_y_2 (U11/cnt_y_2)
+     LUT5:I0->O           15   0.053   0.577  U11/Msub_y_ptr_xor<4>111 (U11/Msub_y_ptr_xor<4>11)
+     LUT5:I3->O            9   0.053   0.792  U11/Msub_y_ptr_xor<7>11 (U11/y_ptr<7>)
+     LUT6:I0->O            3   0.053   0.739  U11/Msub_GND_17_o_GND_17_o_sub_42_OUT_xor<9>16 (U11/Msub_GND_17_o_GND_17_o_sub_42_OUT_xor<9>15)
+     LUT6:I1->O           13   0.053   0.819  U11/isin25 (U11/isin2)
+     LUT6:I0->O           12   0.053   0.485  U11/Mmux_blue126 (U11/Mmux_blue12)
+     LUT4:I3->O            1   0.053   0.399  U11/Mmux_blue11 (Blue_0_OBUF)
+     OBUF:I->O                 0.000          Blue_0_OBUF (Blue<0>)
     ----------------------------------------
-    Total                      4.291ns (0.547ns logic, 3.744ns route)
-                                       (12.7% logic, 87.3% route)
+    Total                      5.288ns (0.600ns logic, 4.688ns route)
+                                       (11.3% logic, 88.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_100mhz'
@@ -1161,7 +1174,7 @@ Clock to Setup on destination clock U8/clkdiv_1
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-U8/clkdiv_1    |    3.271|         |         |         |
+U8/clkdiv_1    |    6.602|         |         |         |
 clk_100mhz     |    1.890|         |         |         |
 ---------------+---------+---------+---------+---------+
 
@@ -1200,14 +1213,14 @@ clk_100mhz     |   10.003|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 60.00 secs
-Total CPU time to Xst completion: 59.73 secs
+Total REAL time to Xst completion: 118.00 secs
+Total CPU time to Xst completion: 118.00 secs
  
 --> 
 
-Total memory usage is 4712764 kilobytes
+Total memory usage is 4714496 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   82 (   0 filtered)
+Number of warnings :   83 (   0 filtered)
 Number of infos    :   23 (   0 filtered)
 

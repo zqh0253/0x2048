@@ -51,8 +51,8 @@ reditem your_instance_name (
   .clka(clka), // input clka
   .wea(wea), // input [0 : 0] wea
   .addra(addra), // input [12 : 0] addra
-  .dina(dina), // input [23 : 0] dina
-  .douta(douta) // output [23 : 0] douta
+  .dina(dina), // input [15 : 0] dina
+  .douta(douta) // output [15 : 0] douta
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 

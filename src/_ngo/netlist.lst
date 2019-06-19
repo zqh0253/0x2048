@@ -1,4 +1,4 @@
-D:\work\cs\JSJZC\0x2048\src\Top.ngc 1560862481
+D:\work\cs\JSJZC\0x2048\src\Top.ngc 1560916117
 code/SAnti_jitter.ngc 1560499574
 code/SEnter_2_32.ngc 1560499574
 code/SSeg7_Dev.ngc 1560499574
@@ -9,5 +9,5 @@ code/SPIO.ngc 1560499574
 code/M_datapath.ngc 1560499574
 code/ctrl.ngc 1560499574
 ipcore_dir/item2.ngc 1560858062
-ipcore_dir/reditem.ngc 1560862383
+ipcore_dir/reditem.ngc 1560915026
 OK

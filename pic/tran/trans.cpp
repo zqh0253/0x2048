@@ -13,7 +13,7 @@ int main()
     for (int i=0; i<1; i++){
     U8 *pdata = GetBmpData24(&bitCountPerPix, &width, &height,( s[i]+string(".bmp")).c_str());
     printf("%d %d", width, height); 
-    ofstream fout (string("file/")+s[i]+string(".txt"));
+    ofstream fout (string("file/")+s[i]+string(".coe"));
     int x, y;
     U32 bmppitch = ((width*bitCountPerPix + 31) >> 5) << 2;
     U8 BytePerPix = bitCountPerPix >> 3;

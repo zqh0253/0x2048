@@ -102,8 +102,8 @@ module VGA_ctrl(
 	assign y_ptr = cnt_y - (2+25+8);
 	
 	
-	wire addr_item2 = y_ptr * 90 + x_ptr;
-	wire addr_item4 = (y_ptr - 100) * 90 + x_ptr - 100;
+	wire [13:0]addr_item2 = y_ptr * 90 + x_ptr;
+	wire [13:0]addr_item4 = (y_ptr - 100) * 90 + x_ptr - 100;
 	item2(clk, 0, addr_item2, 0, rgbw2);
 	reditem(clk, 0, addr_item4, 0, rgbw4);
 	
