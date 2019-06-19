@@ -1,5 +1,3 @@
-verilog work "ipcore_dir/reditem.v"
-verilog work "ipcore_dir/item2.v"
 verilog work "code/M_datapath_IO.v"
 verilog work "code/mulit_ctrl_IO.v"
 verilog work "ipcore_dir/RAM_B.v"

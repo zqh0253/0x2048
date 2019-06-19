@@ -4,14 +4,22 @@ init:
 	addi $t0, $zero, 0x1;
 	sw $t0, 0($s6);
 	sw $t0, 4($s6);
-	sw $t0, 8($s6);
-	sw $t0, 12($s6);
 	addi $s5, $zero, 0x840 		//存放伪随机数列的起始地址
 	addi $s4, $zero, 0x04;		//比较常量4
-	addi $a3, $zero, 0xFFFFD000;	//存放按键信息的地址
+	addi $a3, $zero, 0xD00;	//存放按键信息的地址
+	slo $a3;
+	slo $a3;
+	slo $a3;
+	slo $a3;
+	addi $t9, $zero, 0x844;		//存放当前操作的伪随机数
 	add $s7, $zero, $zero;
+	add $s2, $zero, $zero;
+	addi $s3, $zero, 0xF0;
 begin:
-	lw $s1, 0($a3);			
+	lw $s1, 0($a3);
+	beq $s1, $s3, begin;
+	beq $s1, $s2, begin;	
+	add $s2, $zero, $s1;		
 	add $s7, $zero, $zero;		//s7存储这一次按键中是否生成新的方块。
 	beq $zero, $zero, tryright;
 	
@@ -68,13 +76,17 @@ loop:
 							add $t8, $t4, $a0;	//加偏移量
 							lw $t5, 0($t4);
 							lw $t6, 0($t8);
-					jbreak:
+					
 							addi $t3, $t3, 1;
 							bne $t6, $zero,  loop3;
 							sw $zero, 0($t4);
 							sw $t5, 0($t8);
-							addi $t7, $t7, 1;
+							addi $s7, $s7, 1;
 							beq $zero, $zero, loop3;
+					jbreak:
+							addi $t3, $t3, 1;
+							beq $zero, $zero, loop3;
+
 					loop3end:
 				addi $t2, $t2, 1;
 				beq $zero, $zero, loop2;
@@ -116,6 +128,7 @@ right:
 					sw $zero, 0($t4);
 					addi $t6, $t6,1;
 					sw $t6, 4($t4);
+					addi $s7, $s7,1;
 					beq $zero, $zero, right2loop2; 
 				right2loop2end:
 			addi $t1, $t1, 1;
@@ -155,6 +168,7 @@ left:
 					sw $zero, 0($t4);
 					addi $t6, $t6,1;
 					sw $t6, -4($t4);
+					addi $s7, $s7,1;
 					beq $zero, $zero, left2loop2; 
 				left2loop2end:
 			addi $t1, $t1, 1;
@@ -195,6 +209,7 @@ up:
 					sw $zero, 0($t4);
 					addi $t6, $t6,1;
 					sw $t6, -16($t4);
+					addi $s7, $s7,1;
 					beq $zero, $zero, up2loop2; 
 				up2loop2end:
 			addi $t1, $t1, 1;
@@ -236,6 +251,7 @@ down:
 					sw $zero, 0($t4);
 					addi $t6, $t6,1;
 					sw $t6, 16($t4);
+					addi $s7, $s7,1;
 					beq $zero, $zero, down2loop2; 
 				down2loop2end:
 			addi $t1, $t1, 1;
@@ -247,4 +263,53 @@ down:
 
 done:
 	//根据s7决定是否生成新的砖块
-	beq $zero, $zero, begin;
+	//beq $zero, $zero, begin;
+	beq $s7, $zero, begin;
+	//t3,t4,t5,t6,t7
+	
+	lw $t3, 0($s5);				//0x840处存放一共存储了多少个伪随机数列.
+	addi $t4, $t9, 0;
+	add $t5, $zero, $t3;			
+	add $t5, $t5, $t5;
+	add $t5, $t5, $t5;
+	addi $t5, $t5, 0x844;			//结束地址
+	addi $t2, $zero, 0x840;
+	tryloop:	
+			lw $t6, 0($t4);			//t6 = 1,2,3,...16应该放在第几个空block中
+			add $t7, $zero, $zero;		//t7 计数器				//循环放在第几个空块
+			add $t0, $zero, $s6;		//从第一个开始循环
+			thenloop:
+			beq $t6, $t7, success; 		//完成了循环	
+			then2:
+				lw $t1, 0($t0);			//取出他的值
+				addi $t0, $t0,4;
+				beq $t1, $zero, then2end;		//如果是0， 循环结束
+				beq $t0, $t2 , thenend; 
+				beq $zero, $zero, then2;
+			then2end:
+				addi $t7, $t7, 1;
+				beq $zero, $zero, thenloop;
+		 
+		thenend:
+			addi $t4, $t4, 4;
+			bne $t4, $t9, goon;
+			addi $t6, $zero, 0xFFFF;
+			sw $t6, 0($s6);
+			beq $zero, $zero, dead;
+			goon:
+			bne $t4, $t5, tryloop;
+			addi $t4, $zero, 0x844;
+			beq $zero, $zero, tryloop;
+			
+		success:
+			addi $t1, $zero, 1;
+			sw $t1, -4($t0);
+			addi $t9, $t9, 4;
+			bne $t9, $t5, goon1;
+			addi $t9, $zero, 0x844;
+		goon1:
+			beq $zero, $zero, begin;
+
+dead:
+	beq $zero, $zero, dead;
+	beq $zero, $zero, dead;

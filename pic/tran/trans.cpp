@@ -3,14 +3,14 @@
 #include <iostream>
 #include <string>
 using namespace std;
-//string s[12]={"2","4","8","16","32","64","128","256","512","1024"};
-string s[1] = {"rd"}; 
+string s[12]={"2","4","8","16","32","64","128","256","512","1024"};
+//string s[1] = {"rd"}; 
 int main()
 {
     U8 bitCountPerPix;
     U32 width, height;
     int kk=1;
-    for (int i=0; i<1; i++){
+    for (int i=0; i<10; i++){
     U8 *pdata = GetBmpData24(&bitCountPerPix, &width, &height,( s[i]+string(".bmp")).c_str());
     printf("%d %d", width, height); 
     ofstream fout (string("file/")+s[i]+string(".coe"));

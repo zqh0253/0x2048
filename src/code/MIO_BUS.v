@@ -36,7 +36,7 @@ module MIO_BUS(
 
 	output reg[31:0]Cpu_data4bus,				//write to CPU
 	output reg[31:0]ram_data_in,				//from CPU write to Memory
-	output reg[8:0]ram_addr,						//Memory Address signals
+	output reg[12:0]ram_addr,						//Memory Address signals
 	output reg data_ram_we,
 	output reg GPIOf0000000_we,
 	output reg GPIOe0000000_we,
