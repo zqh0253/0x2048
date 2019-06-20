@@ -47,8 +47,8 @@ module item4(
 input clka;
 input [0 : 0] wea;
 input [12 : 0] addra;
-input [15 : 0] dina;
-output [15 : 0] douta;
+input [11 : 0] dina;
+output [11 : 0] douta;
 
 // synthesis translate_off
 
@@ -91,8 +91,8 @@ output [15 : 0] douta;
     .C_PRIM_TYPE(1),
     .C_READ_DEPTH_A(8100),
     .C_READ_DEPTH_B(8100),
-    .C_READ_WIDTH_A(16),
-    .C_READ_WIDTH_B(16),
+    .C_READ_WIDTH_A(12),
+    .C_READ_WIDTH_B(12),
     .C_RST_PRIORITY_A("CE"),
     .C_RST_PRIORITY_B("CE"),
     .C_RST_TYPE("SYNC"),
@@ -111,8 +111,8 @@ output [15 : 0] douta;
     .C_WRITE_DEPTH_B(8100),
     .C_WRITE_MODE_A("WRITE_FIRST"),
     .C_WRITE_MODE_B("WRITE_FIRST"),
-    .C_WRITE_WIDTH_A(16),
-    .C_WRITE_WIDTH_B(16),
+    .C_WRITE_WIDTH_A(12),
+    .C_WRITE_WIDTH_B(12),
     .C_XDEVICEFAMILY("kintex7")
   )
   inst (

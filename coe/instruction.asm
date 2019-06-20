@@ -1,17 +1,17 @@
 init:
 	//假设我前面预留512条指令的位置，那么我的数据起始地址就是4*512.
-	addi $s6, $zero, 0x800		//s6:存放16个格子数据的起始地址.
+	addi $s6, $zero, 0x400		//s6:存放16个格子数据的起始地址.
 	addi $t0, $zero, 0x1;
 	sw $t0, 0($s6);
 	sw $t0, 4($s6);
-	addi $s5, $zero, 0x840 		//存放伪随机数列的起始地址
+	addi $s5, $zero, 0x440 		//存放伪随机数列的起始地址
 	addi $s4, $zero, 0x04;		//比较常量4
 	addi $a3, $zero, 0xD00;	//存放按键信息的地址
 	slo $a3;
 	slo $a3;
 	slo $a3;
 	slo $a3;
-	addi $t9, $zero, 0x844;		//存放当前操作的伪随机数
+	addi $t9, $zero, 0x444;		//存放当前操作的伪随机数
 	add $s7, $zero, $zero;
 	add $s2, $zero, $zero;
 	addi $s3, $zero, 0xF0;
@@ -272,8 +272,8 @@ done:
 	add $t5, $zero, $t3;			
 	add $t5, $t5, $t5;
 	add $t5, $t5, $t5;
-	addi $t5, $t5, 0x844;			//结束地址
-	addi $t2, $zero, 0x840;
+	addi $t5, $t5, 0x444;			//结束地址
+	addi $t2, $zero, 0x440;
 	tryloop:	
 			lw $t6, 0($t4);			//t6 = 1,2,3,...16应该放在第几个空block中
 			add $t7, $zero, $zero;		//t7 计数器				//循环放在第几个空块
@@ -298,7 +298,7 @@ done:
 			beq $zero, $zero, dead;
 			goon:
 			bne $t4, $t5, tryloop;
-			addi $t4, $zero, 0x844;
+			addi $t4, $zero, 0x444;
 			beq $zero, $zero, tryloop;
 			
 		success:
@@ -306,7 +306,7 @@ done:
 			sw $t1, -4($t0);
 			addi $t9, $t9, 4;
 			bne $t9, $t5, goon1;
-			addi $t9, $zero, 0x844;
+			addi $t9, $zero, 0x444;
 		goon1:
 			beq $zero, $zero, begin;
 

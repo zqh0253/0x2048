@@ -46,6 +46,7 @@ module Top(
 );
 	
 	//	SAnti_jitter
+	wire cisin;
 	wire rst;
 	wire [4:0] Key_out;
 	wire [3:0] BTN_OK;
@@ -75,11 +76,11 @@ module Top(
 	wire GPIOE0, GPIOF0;
 	wire [15:0] LED_out;
 	//	RAM_B
-	wire [12:0] addra;
+	wire [10:0] addra;
 	wire wea;
 	wire [31:0] dina;
 	wire [31:0] douta;
-	wire [12:0] addrb;
+	wire [10:0] addrb;
 	wire web;
 	wire [31:0] doutb;
 	//	Counter_x
@@ -94,8 +95,6 @@ module Top(
 	wire [1:0] findrun;
 	wire [31:0] score;
 	wire [9:0] PS2_key;
-	wire [9:0] findx_ptr;
-	wire [9:0] findy_ptr;
 	assign clk_VGA = Div[1];
 	
 	assign IO_clk = ~Clk_CPU;
@@ -152,8 +151,8 @@ module Top(
 	Multi_8CH32	U5(
 		.clk(IO_clk), .rst(rst), .EN(GPIOE0), .Test(SW_OK[7:5]),
 		.point_in({Div[31:0], Div[31:13], State[4:0], 8'b0}), .LES(64'b0),
-		.Data0(CPU2IO), .data1({2'd0, findrun, 14'd0, addrb}), .data2(inst), .data3({27'd0,Red,Green,Blue}), 
-		.data4(12'd0), .data5(doutb), .data6(Data_in), .data7(PC), 
+		.Data0(CPU2IO), .data1({2'd0, findrun, 14'd0, addrb}), .data2(inst), .data3({23'd0, findpos}), 
+		.data4({cisin,19'd0, Red, Green, Blue}), .data5(doutb), .data6(Data_in), .data7(PC), 
 		.Disp_num(Disp_num), .point_out(point_out), .LE_out(LE_out)
 	);
 	
@@ -165,7 +164,7 @@ module Top(
 	
 	VGA_ctrl	U11(
 		.clk(clk_VGA), .rst(rst), .hs(HSYNC), .vs(VSYNC), .addrb(addrb), .score(score), .SW(SW_OK[8]),
-		.color(doutb), .red(Red), .green(Green), .blue(Blue), .pos(findpos), .run(findrun)
+		.color(doutb), .red(Red), .green(Green), .blue(Blue), .pos(findpos), .run(findrun), .isin(cisin)
 	);
 
 endmodule

@@ -1,11 +1,14 @@
-D:\work\cs\JSJZC\0x2048\src\Top.ngc 1560949620
+D:\work\cs\JSJZC\0x2048\src\Top.ngc 1561048582
 code/SAnti_jitter.ngc 1560499574
 code/SEnter_2_32.ngc 1560499574
 code/SSeg7_Dev.ngc 1560499574
-ipcore_dir/RAM_B.ngc 1560948434
+ipcore_dir/RAM_B.ngc 1561001643
 code/Counter_x.ngc 1560499574
 code/Multi_8CH32.ngc 1560499574
 code/SPIO.ngc 1560499574
 code/M_datapath.ngc 1560499574
 code/ctrl.ngc 1560499574
+ipcore_dir/item2.ngc 1561019187
+ipcore_dir/item4.ngc 1561019330
+ipcore_dir/bg.ngc 1561019050
 OK
