@@ -91,7 +91,7 @@ ENTITY bg_exdes IS
       --Inputs - Port A
   
     WEA            : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ADDRA          : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    ADDRA          : IN STD_LOGIC_VECTOR(18 DOWNTO 0);
   
     DINA           : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
   
@@ -118,7 +118,7 @@ ARCHITECTURE xilinx OF bg_exdes IS
       --Port A
   
     WEA        : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    ADDRA      : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    ADDRA      : IN STD_LOGIC_VECTOR(18 DOWNTO 0);
   
     DINA       : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
   

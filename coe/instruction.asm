@@ -11,6 +11,7 @@ init:
 	slo $a3;
 	slo $a3;
 	slo $a3;
+	slo $a3;
 	addi $t9, $zero, 0x444;		//存放当前操作的伪随机数
 	add $s7, $zero, $zero;
 	add $s2, $zero, $zero;

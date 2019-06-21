@@ -50,7 +50,7 @@
 bg your_instance_name (
   .clka(clka), // input clka
   .wea(wea), // input [0 : 0] wea
-  .addra(addra), // input [7 : 0] addra
+  .addra(addra), // input [18 : 0] addra
   .dina(dina), // input [11 : 0] dina
   .douta(douta) // output [11 : 0] douta
 );

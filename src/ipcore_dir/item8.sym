@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="item8">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2019-6-20T16:34:59</timestamp>
+    <timestamp>2019-6-21T3:6:37</timestamp>
     <pin polarity="Input" x="0" y="80" name="addra[12:0]" />
     <pin polarity="Input" x="0" y="112" name="dina[11:0]" />
     <pin polarity="Input" x="0" y="208" name="wea[0:0]" />

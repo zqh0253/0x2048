@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Thu Jun 20 08:23:16 2019
+# Date: Fri Jun 21 03:54:47 2019
 #
 ##############################################################
 #
@@ -46,7 +46,7 @@ CSET axi_id_width=4
 CSET axi_slave_type=Memory_Slave
 CSET axi_type=AXI4_Full
 CSET byte_size=9
-CSET coe_file=D:\work\cs\JSJZC\0x2048\pic\tran\file\whi.coe
+CSET coe_file=D:\work\cs\JSJZC\0x2048\pic\tran\file\background.coe
 CSET collision_warnings=ALL
 CSET component_name=bg
 CSET disable_collision_warnings=false
@@ -97,7 +97,7 @@ CSET use_regcea_pin=false
 CSET use_regceb_pin=false
 CSET use_rsta_pin=false
 CSET use_rstb_pin=false
-CSET write_depth_a=130
+CSET write_depth_a=307200
 CSET write_width_a=12
 CSET write_width_b=12
 # END Parameters
@@ -105,4 +105,4 @@ CSET write_width_b=12
 MISC pkg_timestamp=2012-11-19T16:22:25Z
 # END Extra information
 GENERATE
-# CRC: a68763de
+# CRC: 20f0ff0f
