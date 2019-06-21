@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Fri Jun 21 12:28:08 2019">
+  <application stringID="NgdBuild" timeStamp="Fri Jun 21 14:19:45 2019">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -92,8 +92,8 @@
         <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="286"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="1824"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="583"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="1228"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="1786"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="1226"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="1788"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="1375"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXF7" value="70"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="31"/>
@@ -132,8 +132,8 @@
         <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="286"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="1824"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="583"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="1228"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="1786"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="1226"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="1788"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="1375"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXF7" value="70"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="31"/>

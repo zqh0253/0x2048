@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: Top.prj
 
@@ -1254,8 +1254,8 @@ Primitive and Black Box Usage:
 #      LUT2                        : 286
 #      LUT3                        : 1824
 #      LUT4                        : 583
-#      LUT5                        : 1228
-#      LUT6                        : 1786
+#      LUT5                        : 1226
+#      LUT6                        : 1788
 #      MUXCY                       : 1375
 #      MUXF7                       : 70
 #      OR2                         : 57
@@ -1356,19 +1356,19 @@ Asynchronous Control Signals Information:
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 Control Signal                                                                                                                                                                                                                                                                   | Buffer(FF name)                                                                                                                                   | Load  |
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-U11/mbg/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux_1212(U11/mbg/XST_GND:G)                                                                                                                                                      | NONE(U11/mbg/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)    | 182   |
+U11/mbg/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/Mmux_dout_mux_1212(U11/mbg/XST_GND:G)                                                                                                                                                      | NONE(U11/mbg/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[72].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)    | 182   |
 U11/_i000050/N1(U11/_i000050/XST_GND:G)                                                                                                                                                                                                                                          | NONE(U11/_i000050/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 6     |
-U11/_i000051/N1(U11/_i000051/XST_GND:G)                                                                                                                                                                                                                                          | NONE(U11/_i000051/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 6     |
+U11/_i000051/N1(U11/_i000051/XST_GND:G)                                                                                                                                                                                                                                          | NONE(U11/_i000051/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 6     |
 U11/_i000052/N1(U11/_i000052/XST_GND:G)                                                                                                                                                                                                                                          | NONE(U11/_i000052/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 6     |
-U11/_i000053/N1(U11/_i000053/XST_GND:G)                                                                                                                                                                                                                                          | NONE(U11/_i000053/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 6     |
-U11/_i000054/N1(U11/_i000054/XST_GND:G)                                                                                                                                                                                                                                          | NONE(U11/_i000054/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 6     |
-U11/_i000055/N1(U11/_i000055/XST_GND:G)                                                                                                                                                                                                                                          | NONE(U11/_i000055/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 6     |
-U11/_i000056/N1(U11/_i000056/XST_GND:G)                                                                                                                                                                                                                                          | NONE(U11/_i000056/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 6     |
+U11/_i000053/N1(U11/_i000053/XST_GND:G)                                                                                                                                                                                                                                          | NONE(U11/_i000053/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 6     |
+U11/_i000054/N1(U11/_i000054/XST_GND:G)                                                                                                                                                                                                                                          | NONE(U11/_i000054/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 6     |
+U11/_i000055/N1(U11/_i000055/XST_GND:G)                                                                                                                                                                                                                                          | NONE(U11/_i000055/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 6     |
+U11/_i000056/N1(U11/_i000056/XST_GND:G)                                                                                                                                                                                                                                          | NONE(U11/_i000056/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 6     |
 U11/_i000057/N1(U11/_i000057/XST_GND:G)                                                                                                                                                                                                                                          | NONE(U11/_i000057/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 6     |
-U11/_i000058/N1(U11/_i000058/XST_GND:G)                                                                                                                                                                                                                                          | NONE(U11/_i000058/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 6     |
-U11/m2/N1(U11/m2/XST_GND:G)                                                                                                                                                                                                                                                      | NONE(U11/m2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)      | 6     |
+U11/_i000058/N1(U11/_i000058/XST_GND:G)                                                                                                                                                                                                                                          | NONE(U11/_i000058/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 6     |
+U11/m2/N1(U11/m2/XST_GND:G)                                                                                                                                                                                                                                                      | NONE(U11/m2/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)      | 6     |
 U11/m4/N1(U11/m4/XST_GND:G)                                                                                                                                                                                                                                                      | NONE(U11/m4/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)      | 6     |
-U3/N1(U3/XST_GND:G)                                                                                                                                                                                                                                                              | NONE(U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram)     | 4     |
+U3/N1(U3/XST_GND:G)                                                                                                                                                                                                                                                              | NONE(U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram)     | 4     |
 U11/mbg/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/cascadelata_tmp(U11/mbg/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(U11/mbg/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
 U11/mbg/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/cascadelatb_tmp(U11/mbg/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(U11/mbg/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T) | 1     |
 U11/mbg/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/cascadelata_tmp(U11/mbg/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(U11/mbg/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_init.ram/NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T)| 1     |
@@ -1445,7 +1445,7 @@ Delay:               6.694ns (Levels of Logic = 12)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'U8/clkdiv_1'
   Clock period: 8.371ns (frequency: 119.464MHz)
-  Total number of paths / destination ports: 409165 / 598
+  Total number of paths / destination ports: 408981 / 598
 -------------------------------------------------------------------------
 Delay:               8.371ns (Levels of Logic = 21)
   Source:            U11/cnt_y_4 (FF)
@@ -1893,12 +1893,12 @@ clk_100mhz     |    6.694|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 50.00 secs
-Total CPU time to Xst completion: 50.76 secs
+Total REAL time to Xst completion: 55.00 secs
+Total CPU time to Xst completion: 55.28 secs
  
 --> 
 
-Total memory usage is 4747804 kilobytes
+Total memory usage is 4747776 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   61 (   0 filtered)

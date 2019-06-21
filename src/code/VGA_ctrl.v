@@ -124,8 +124,8 @@ module VGA_ctrl(
 		else if (x_ptr>=260 && x_ptr<=350 && y_ptr>=140 && y_ptr<=230)	begin addrb = 11'd262; block_cnt[6] = color; end
 		else if (x_ptr>=370 && x_ptr<=460 && y_ptr>=140 && y_ptr<=230)	begin addrb = 11'd263; block_cnt[7] = color; end
 		else if (x_ptr>=40 && x_ptr<=130 && y_ptr>=250 && y_ptr<=340)	begin addrb = 11'd264; block_cnt[8] = color; end
-		else if (x_ptr>=150 && x_ptr<=240 && y_ptr>=250 && y_ptr<=340)	begin addrb = 11'd266; block_cnt[9] = color; end
-		else if (x_ptr>=260 && x_ptr<=350 && y_ptr>=250 && y_ptr<=340)	begin addrb = 11'd267; block_cnt[10] = color; end
+		else if (x_ptr>=150 && x_ptr<=240 && y_ptr>=250 && y_ptr<=340)	begin addrb = 11'd265; block_cnt[9] = color; end
+		else if (x_ptr>=260 && x_ptr<=350 && y_ptr>=250 && y_ptr<=340)	begin addrb = 11'd266; block_cnt[10] = color; end
 		else if (x_ptr>=370 && x_ptr<=460 && y_ptr>=250 && y_ptr<=340)	begin addrb = 11'd267; block_cnt[11] = color; end
 		else if (x_ptr>=40 && x_ptr<=130 && y_ptr>=360 && y_ptr<=450)	begin addrb = 11'd268; block_cnt[12] = color; end
 		else if (x_ptr>=150 && x_ptr<=240 && y_ptr>=360 && y_ptr<=450)	begin addrb = 11'd269; block_cnt[13] = color; end

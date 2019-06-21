@@ -6,6 +6,7 @@ init:
 	sw $t0, 4($s6);
 	addi $s5, $zero, 0x440 		//存放伪随机数列的起始地址
 	addi $s4, $zero, 0x04;		//比较常量4
+	//addi $a3, $zero, 0xFFFFD000;
 	addi $a3, $zero, 0xD00;	//存放按键信息的地址
 	slo $a3;
 	slo $a3;
@@ -274,7 +275,6 @@ done:
 	add $t5, $t5, $t5;
 	add $t5, $t5, $t5;
 	addi $t5, $t5, 0x444;			//结束地址
-	addi $t2, $zero, 0x440;
 	tryloop:	
 			lw $t6, 0($t4);			//t6 = 1,2,3,...16应该放在第几个空block中
 			add $t7, $zero, $zero;		//t7 计数器				//循环放在第几个空块
@@ -282,10 +282,10 @@ done:
 			thenloop:
 			beq $t6, $t7, success; 		//完成了循环	
 			then2:
+				beq $t0, $s5 , thenend; 
 				lw $t1, 0($t0);			//取出他的值
 				addi $t0, $t0,4;
 				beq $t1, $zero, then2end;		//如果是0， 循环结束
-				beq $t0, $t2 , thenend; 
 				beq $zero, $zero, then2;
 			then2end:
 				addi $t7, $t7, 1;
